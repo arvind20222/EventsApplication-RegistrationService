@@ -7,7 +7,7 @@ import com.fsd.entity.User;
 
 import feign.Headers;
 
-@FeignClient(name = "USERSERVICE", url = "http://localhost:7001")
+@FeignClient(name = "USERSERVICE", url = "${user.feign.url}")
 public interface UserClient {
 
     @GetMapping("/users/{id}")

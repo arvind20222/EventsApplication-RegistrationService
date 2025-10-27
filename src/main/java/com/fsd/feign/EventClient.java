@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import com.fsd.entity.Event;
 
 import feign.Headers;
-@FeignClient(name = "EventService", url = "http://localhost:7070")
+@FeignClient(name = "EventService", url = "${event.feign.url}")
 
 public interface EventClient {
 	
